@@ -24,6 +24,7 @@ dependencies = [
     "gradio>=5.0.0",
     "pyarrow>=26.0.0",
     "fire>=0.7.1",
+    "torch>=2.15.0",
 ]
 
 [dependency-groups]
