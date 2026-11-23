@@ -158,3 +158,8 @@ def process_df(
 
 def split_vals(df: pd.DataFrame, n: int) -> pd.DataFrame:
     return df[:n].copy(), df[n:].copy()
+
+def rf_feat_importance(m, df):
+    """Impurity-based feature importance of a fitted forest (or tree), sorted by decreasing importance."""
+    return pd.DataFrame({'cols': df.columns, 'imp': m.feature_importances_}
+                       ).sort_values('imp', ascending = False)
